@@ -56,7 +56,7 @@ function App() {
               })}
             </div>
             <div className="text-center">
-              {loading && <div className="spinner-border text-success" role="status"><span class="visually-hidden">...Loading</span>
+              {loading && <div className="spinner-border text-success" role="status"><span className="visually-hidden">...Loading</span>
               </div>}
             </div>
 
