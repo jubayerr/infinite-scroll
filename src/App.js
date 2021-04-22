@@ -46,14 +46,20 @@ function App() {
         </div>
         <div className="row">
           <div className="col-md-6 offset-3">
-            {books.map((book, index) => {
-              if (books.length === index + 1) {
-                return <div ref={lastBookElementRef} key={book}><p className="lead">{book}</p></div>
-              } else {
-                return <div key={book}><p className="lead">{book}</p></div>
-              }
-            })}
-            <div className="text-success text-center"><p className="lead">{loading && "...loading"}</p></div>
+            <div>
+              {books.map((book, index) => {
+                if (books.length === index + 1) {
+                  return <div ref={lastBookElementRef} key={book}><p className="lead">{book}</p></div>
+                } else {
+                  return <div key={book}><p className="lead">{book}</p></div>
+                }
+              })}
+            </div>
+            <div className="text-center">
+              {loading && <div className="spinner-border text-success" role="status"><span class="visually-hidden">...Loading</span>
+              </div>}
+            </div>
+
             <div className="text-danger text-center">{error && "Error!"}</div>
           </div>
         </div>
